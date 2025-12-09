@@ -1,0 +1,123 @@
+size 24 20                              !Sets the size of the paper
+! set texlabels 1
+amove 0.5 10.5
+begin graph
+        size 12 10                      !Sets the size of the graph
+        data "profil_Y=-1.15_CT=1.dat"           d10=c1,c2 
+		data "profil_Y=-1.15_CT=1e7.dat"        d20=c1,c2 
+        data "profil_Y=0_CT=1.dat"               d30=c1,c2 
+		data "profil_Y=0_CT=1e7.dat"            d40=c1,c2 
+		data "profil_Y=-1.15_CT=1e6.dat"         d50=c1,c2 
+		data "profil_Y=0_CT=1e6.dat"             d60=c1,c2 
+		yaxis min 0 max 300 dticks 100 hei .5
+		xaxis min 0 max 13 dticks 4 hei .5
+        ytitle "P (MeV fm^{-3})"  hei .5
+		xtitle "r (km)" hei .5
+		d10 line lstyle 1 lwidth 0.06 color black
+		d20 line lstyle 2 lwidth 0.06 color blue
+        d30 line lstyle 3 lwidth 0.06 color red
+        d40 line lstyle 4 lwidth 0.06 color green
+        d50 line lstyle 5 lwidth 0.06 color grey30
+        d60 line lstyle 6 lwidth 0.06 color grey60
+		!key pos tl hei 0.4
+end graph 
+!marker circle msize 0.2 
+
+! set just bc
+! amove xg(6.5) yg(40)
+! tex "$w$=$1/3$" !add 0.1 name sq5b
+
+! set just bc
+! amove xg(12.) yg(75)
+! tex "$w$=$1$" !add 0.1 name sq5b
+
+
+amove 12. 10.5
+begin graph
+        size 12 10                      !Sets the size of the graph
+        data "profil_Y=-1.15_CT=1.dat"          d10=c1,c3 
+		data "profil_Y=-1.15_CT=1e7.dat"       d20=c1,c3 
+        data "profil_Y=0_CT=1.dat"              d30=c1,c3 
+		data "profil_Y=0_CT=1e7.dat"           d40=c1,c3 
+		data "profil_Y=-1.15_CT=1e6.dat"        d50=c1,c3 
+		data "profil_Y=0_CT=1e6.dat"            d60=c1,c3 
+		yaxis min 0 max 3 dticks 1 hei .5
+		xaxis min 0 max 13 dticks 4 hei .5
+        ytitle "m (M_{\odot})"  hei .5
+		xtitle "r (km)" hei .5
+		d10 line lstyle 1 lwidth 0.06 color black
+		d20 line lstyle 2 lwidth 0.06 color blue
+        d30 line lstyle 3 lwidth 0.06 color red
+        d40 line lstyle 4 lwidth 0.06 color green
+        d50 line lstyle 5 lwidth 0.06 color grey30
+        d60 line lstyle 6 lwidth 0.06 color grey60
+		!key pos tl hei 0.4
+end graph 
+
+
+
+begin key
+position tl
+ hei .4
+nobox
+line lstyle 1 lwidth 0.06 color black text "Y=-1.15, Dl_p^2=1 m^2"
+line lstyle 5 lwidth 0.06 color grey30  text "Y=-1.15, Dl_p^2=10^{6} m^2"
+line lstyle 2 lwidth 0.06 color blue  text "Y=-1.15, Dl_p^2=10^{7} m^2"
+line lstyle 3 lwidth 0.06 color red   text "Y=0, Dl_p^2=1 m^2"
+line lstyle 6 lwidth 0.06 color grey60  text "Y=0, Dl_p^2=10^{6} m^2"
+line lstyle 4 lwidth 0.06 color green text "Y=0, Dl_p^2=10^{7} m^2"
+end key
+
+begin key
+position br
+ hei .4
+nobox
+text "\sigma=Y(2Gm/r)P"
+text "C^~=Dl_p^2"
+end key
+
+
+
+amove 0.5 0.5
+begin graph
+        size 12 10                      !Sets the size of the graph
+        data "profil_Y=-1.15_CT=1.dat"          d10=c1,c7 
+		data "profil_Y=-1.15_CT=1e7.dat"       d20=c1,c7 
+        data "profil_Y=0_CT=1.dat"              d30=c1,c7 
+		data "profil_Y=0_CT=1e7.dat"           d40=c1,c7 
+		data "profil_Y=-1.15_CT=1e6.dat"        d50=c1,c7 
+		data "profil_Y=0_CT=1e6.dat"            d60=c1,c7 
+		yaxis min -80 max 0 dticks 20 hei .5
+		xaxis min 0 max 13 dticks 4 hei .5
+		ytitle "\sigma (MeV fm^{-3})"  hei .5
+		xtitle "r (km)" hei .5
+		d10 line lstyle 1 lwidth 0.06 color black
+		d20 line lstyle 2 lwidth 0.06 color blue
+        d30 line lstyle 3 lwidth 0.06 color red
+        d40 line lstyle 4 lwidth 0.06 color green
+        d50 line lstyle 5 lwidth 0.06 color grey30
+        d60 line lstyle 6 lwidth 0.06 color grey60
+		!key pos tl hei 0.4
+end graph 
+
+amove 12. 0.5
+begin graph
+        size 12 10                      !Sets the size of the graph
+        data "profil_Y=-1.15_CT=1.dat"          d10=c1,c5 
+		data "profil_Y=-1.15_CT=1e7.dat"       d20=c1,c5 
+        data "profil_Y=0_CT=1.dat"              d30=c1,c5 
+		data "profil_Y=0_CT=1e7.dat"           d40=c1,c5 
+		data "profil_Y=-1.15_CT=1e6.dat"        d50=c1,c5 
+		data "profil_Y=0_CT=1e6.dat"            d60=c1,c5 
+		yaxis min -0.5 max 0.3 dticks 0.2 hei .5
+		xaxis min 0 max 13 dticks 4 hei .5
+		ytitle "\Lambda_c (10^{6} MeV^2 fm^{-6})"  hei .5
+        xtitle "r (km)" hei .5
+		d10 line lstyle 1 lwidth 0.06 color black
+		d20 line lstyle 2 lwidth 0.06 color blue
+        d30 line lstyle 3 lwidth 0.06 color red
+        d40 line lstyle 4 lwidth 0.06 color green
+        d50 line lstyle 5 lwidth 0.06 color grey30
+        d60 line lstyle 6 lwidth 0.06 color grey60
+		!key pos tl hei 0.4
+end graph 
